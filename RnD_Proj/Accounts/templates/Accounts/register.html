@@ -1,0 +1,28 @@
+  <!DOCTYPE html>
+  {% extends 'TestApp/base.html' %}
+
+  {% block content %}<br><br><br>
+  <div class="">
+    <h1>Register</h1>
+    <form class="" action='register'  method="post">
+      {% csrf_token %}
+      <input type="text" name="first_name" placeholder="First Name" value="">
+      <input type="text" name="last_name" placeholder="Last Name" value="">
+      <input type="text" name="username" placeholder="User Name" value="">
+      <input type="text" name="email" placeholder="Your Email" value="">
+      <input type="password" name="password1" placeholder="Password" value="">
+      <input type="password" name="password2" placeholder="Confirm Password" value=""><br><br>
+      <button type="submit" class="btn btn-outline-primary" name="button">register</button>
+
+
+
+
+    </form>
+
+  </div>
+{% for message in messages %}
+
+{{ message }}
+
+{% endfor %}
+  {% endblock %}
